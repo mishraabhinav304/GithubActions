@@ -1,4 +1,4 @@
-name: fetch env variables
+name: Fetch Env Variables
 
 on: 
   push
@@ -7,6 +7,8 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: print env variable
-        uses: checkout/checkout@v4
-        run: echo "GITHUB_WORKSPACE"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print env variable
+        run: echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
